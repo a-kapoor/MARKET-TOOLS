@@ -1,10 +1,14 @@
-outputdir="Data"
-startdate="2019-01-01"
-months=7
-stock="NSE:NIFTY 50"
+#outputdir="Data"
+#startdate="2015-01-01"
+#months=3
+#stock="NSE:NIFTY 50"
 
 ######################################################################
 ###### DO NOT MODIFY Below this#########
+echo !!##!!----------------------!!##!!----------------------
+echo Starting a new query!!
+echo !!##!!----------------------!!##!!----------------------
+
 prefix="file"
 rm -rf output/$outputdir
 mkdir output/$outputdir
