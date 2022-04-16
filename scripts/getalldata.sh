@@ -17,10 +17,10 @@ s=$startdate
 echo Generating 30 days at a time!
 for d in $(seq $months)
 do
-    e=$(date -d "$s + 30 days" +'%Y-%m-%d')
+    e=$(gdate -d "$s + 30 days" +'%Y-%m-%d')
     echo Generating for: ${s} - ${e}
     . scripts/getOneTimedata.sh "$stock" "$s" "$e" minute output/$outputdir/${prefix}_$d.csv
-    s=$(date -d "$e + 1 day" +'%Y-%m-%d')
+    s=$(gdate -d "$e + 1 day" +'%Y-%m-%d')
 done
 echo Combining and preprocessing!
 ### Combine all csvs into one
